@@ -452,82 +452,13 @@ table {
 	transition-delay: 0.5s;
 }
 /* ==========================================================================Hero========================================================================== */
-/*.hero {
+/*
+.hero {
 	background: url('../img/me1.jpg') right bottom no-repeat;
 	background-size: contain;
 	padding:110px 0 100px 0;
 	height:auto;
-	background-color: #FBFBFB; */
-
-	/* EDIT NEW */
-/* Hero Slider Styles */
-.hero-slider {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  }
-  
-  .slider {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-  }
-  
-  .slide {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-size: cover;
-	background-position: center;
-	opacity: 0;
-	transition: opacity 1s ease-in-out;
-  }
-  
-  .slide.active {
-	opacity: 1;
-  }
-  
-  .slider-content {
-	position: relative;
-	z-index: 10;
-	text-align: center;
-	color: #FFF;
-  }
-  
-  .slider-content h1 {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-	color: #0056D2;
-	text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-  }
-  
-  .slider-content p {
-	margin-bottom: 1.5rem;
-	font-size: 1.2rem;
-	color: #333;
-  }
-  
-  .slider-content .cta-button {
-	background: #FF6F3C;
-	color: #FFF;
-	padding: 0.75rem 1.5rem;
-	border-radius: 5px;
-	text-decoration: none;
-	font-weight: bold;
-	transition: background 0.3s;
-  }
-  
-  .slider-content .cta-button:hover {
-	background: #D94D1E;
-  } /*EDIT NEW ENDS */
+	background-color: #FBFBFB;
 }
 .hero h1 {
 	font-size: 120px;
@@ -541,7 +472,8 @@ table {
 	color:#a1a9b0;
 	/* display:inline-block; */
 }
-.hero h3 {
+/*.
+hero h3 {
 	font-size: 20px;
 	margin:0;
 	padding:0;
@@ -554,9 +486,75 @@ table {
 .hero p {
 	letter-spacing:1px;
 	color:#fff;
-	font-size: 15px;
-}
+	font-size: 15px; 
+} */
 /* Boucing Arrow Animation */
+
+/* try new one here */
+/* Hero Section */
+.hero {
+	display: flex; /* Enable side-by-side layout */
+	align-items: center;
+	justify-content: space-between;
+	padding: 110px 0 100px 0;
+	height: 100vh; /* Full height */
+	background-color: #FBFBFB;
+  }
+  
+  /* Left Side: Existing Content */
+  .hero .inner {
+	flex: 2; /* Left side takes more space */
+  }
+  
+  .hero h1 {
+	font-size: 120px;
+	letter-spacing: -8px;
+	margin: 0;
+	font-weight: 600;
+	line-height: 95px;
+	text-transform: uppercase;
+  }
+  
+  .hero h1 span {
+	color: #a1a9b0;
+  }
+  
+  .hero h3 {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	opacity: 0.5;
+	color: #E04343;
+	letter-spacing: 18px;
+	line-height: 50px;
+	text-transform: uppercase;
+  }
+  
+  /* Right Side: Slider */
+  .hero-slider {
+	flex: 1; /* Right side takes remaining space */
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+  }
+  
+  .hero-slider .slide {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+  }
+  
+  .hero-slider .slide.active {
+	opacity: 1;
+  } 
+  /*end of new one here */
+
 @keyframes arrowbounce {
 	from {
 		-webkit-transform:translateY(0);

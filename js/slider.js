@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const slides = document.querySelectorAll(".slide");
+    const slides = document.querySelectorAll(".hero-slider .slide");
     let currentIndex = 0;
   
     function changeSlide() {
